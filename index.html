@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <h1 id="site-heading">Random Movie Roulette Helper</h1>
+  <div id="site-description">
+    <h3>What's the purpose of this site?</h3>
+    <p>Tobias Ansersen created <a href
+    ="https://letterboxd.com/tobiasandersen2/list/random-movie-roulette/", target="_blank">this
+    list on <i>Letterboxd.com</i></a>. It's a movie-choosing game in which you generate a random
+    number and then you watch the film on the list that's located at the position that was
+    generated for you. Normally, you'd have to manually search for and find the film that's been
+    chosen for you, and since the list currently contains more than 7,500 movies, this can be a bit
+    of a hassle. <br><br> This page is meant to assist you in generating a number and then locating
+    the number that's generated for you. Just click the button below and then click on the
+    generated link to be taken to the respective movie's page in the list. Once on the page, simply
+    perform a Ctrl+F search to find the number on the page. <br><br> If desired, you may then type
+    in the movie's title to generate a link to search results on the streaming search engine <a
+    href="https://www.justwatch.com/us", target="_blank"><i>JustWatch.com</i></a>. 
+      <br><br><b>Note:</b> the generated link(s) will <i>not</i> automatically open in a new tab.
+    </p>
+  </div>
+  <button id= "generate-movie" type="button" onclick="generateMovie()">Click me to generate a movie</button>
+  <div id="movie-content">
+    <div id="movie-num"></div>
+    <div id="list-link"></div>
+    <div id="movie-title-search">
+      <input type="text" id="movie-title-textbox" value="Movie title" placeholder="Movie Title">
+      <input type="submit" id="movie-title-submit" onclick="getTitleLink()" value="Get Link">
+    </div>
+    <div id="title-link"></div>
+  </div>
+  <script>
+  // Generate number and link to that number's page
+  function generateMovie() {
+    // Remove previously generated content (if exists)
+    document.getElementById("list-link").innerHTML = "";
+    document.getElementById("movie-title-textbox").value = "";
+    document.getElementById("title-link").innerHTML = "";
+    
+    var content = document.getElementById("movie-content");
+    content.style.display = "block";
+    
+    var movie_num = generateNumber();
+    
+    document.getElementById("movie-num").innerHTML= "Movie number chosen: " + movie_num;
+    
+    // Create link and append it to document
+    var link = document.createElement("a");
+    link.setAttribute("href", getListLink(movie_num));
+
+    var text = document.createTextNode("Link to movie's page in list");
+    link.appendChild(text);
+    
+    var div = document.getElementById("list-link");
+    div.appendChild(link);
+  }
+
+  // Generates link to "JustWatch.com" search results for title of movie.
+  function getTitleLink() {
+    // Remove previously generated content (if exists)
+    document.getElementById("title-link").innerHTML = "";
+
+    var title = document.getElementById("movie-title-textbox").value;
+    var delim_title = title.toLowerCase().replace(" ", "-");
+    var search_link = "https://www.justwatch.com/us/movie/" + delim_title;
+    
+    // Create link and append it to document
+    var link = document.createElement("a");
+    link.setAttribute("href", search_link);
+
+    var text = document.createTextNode("Link to JustWatch search results: ");
+    link.appendChild(text);
+    
+    var div = document.getElementById("title-link");
+    div.appendChild(link);
+  }
+  </script>
+
+
+</body>
+</html>

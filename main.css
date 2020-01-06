@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px 0px 0px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* #site-heading {
+
+} */
+
+#site-description {
+  width: 650px;
+  text-align: justify;
+}
+
+#generate-movie {
+  width: 450px;
+  margin-top: 10px;
+  padding: 5px 10px 10px 10px;
+  border: 3px solid darkblue;
+  border-radius: 10px;
+  font-size: 30px;
+  color: rgb(0, 0, 128);
+  background: rgb(176, 196, 222);
+}
+
+#generate-movie:hover {
+  background: lightslategray;
+}
+
+#movie-content {
+  width: 450px;
+  display: none;
+  background: rgba(65, 105, 225, .66);
+  border: 3px solid black;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 0px 10px 10px 15px;
+  text-align: center;
+}
+
+
+#movie-num {
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 25px;
+  color: rgb(25, 25, 112);
+}
+
+#list-link {
+  font-size: 25px;
+  color: rgb(25, 25, 112);
+}
+
+#movie-title-search {
+  margin: 15px;
+}
+
+#movie-title-textbox {
+  width: 214px;
+  border-radius: 4px;
+  padding: 4px;
+  border: 1px solid rgba(25, 25, 112, .75);
+}
+
+#movie-title-submit {
+  padding: 2px 15px;
+  border-radius: 3px;
+  border: 1px solid rgba(25, 25, 112, .75);
+}
+
+#movie-title-submit:hover {
+  background-color: darkgray;
+}
+
+#title-link {
+  font-size: 25px;
+  color: rgb(25, 25, 112);
+}
