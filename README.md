@@ -6,4 +6,4 @@ To run the program, click on the index.html file.
 
 ## And That's It
 
-I hope this tool is helpful to you. Any feedback would be appreciated and can (ideally) be left as a comment on [my Letterboxd clone of this list](https://letterboxd.com/zachary_white/list/random-movie-roulette-with-number-locator/).
+I hope this tool is helpful to you. Thanks for visiting!
