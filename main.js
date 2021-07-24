@@ -5,7 +5,7 @@
 //
 // Also, "L-list" refers to the Letterboxd.com list this program is for.
 
-MAX = 7552; // Number of movies currently in L-list
+MAX = 8933; // Number of movies currently in L-list
 
 
 // Returns a random number between min and max (both inclusive)
